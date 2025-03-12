@@ -1,4 +1,4 @@
-import {calcularIMC, tabelaIMC} from "./calculadora"
+import {calcularIMC, tabelaIMC} from "./calculadora.js"
 
 console.log("tabela de IMC")
 
