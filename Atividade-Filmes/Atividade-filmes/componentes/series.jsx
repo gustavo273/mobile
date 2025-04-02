@@ -9,7 +9,7 @@ export default function Series(props) {
       <Text style={styles.texto}>Nome da Série: {nome}</Text>
       <Text style={styles.texto}>Ano de Lançamento: {ano}</Text>
       <Text style={styles.texto}>Criador: {diretor}</Text>
-      <Text style={styles.texto}>Criador: {numerotemporadas}</Text>
+      <Text style={styles.texto}>temporadas: {temporadas}</Text>
     </View>
   );
 }
