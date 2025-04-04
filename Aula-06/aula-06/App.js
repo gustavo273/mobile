@@ -1,14 +1,7 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import {
-  PaperProvider,
-  Card,
-  Title,
-  Paragraph,
-  Divider,
-  Button,
-} from "react-native-paper";
+import {PaperProvider, Card, Title, Paragraph, Divider, Button,} from "react-native-paper";
 
 export default function App() {
   return (
@@ -17,22 +10,20 @@ export default function App() {
         <StatusBar style="auto" />
 
         
-        <Button mode="container" onPress={() => alert("Clicou")}>
-          Clique Aqui
-        </Button>
+        <Button mode="container" onPress={() => alert("Clicou")}>Clique Aqui</Button>
         <Button mode="contained.tonal">Clique Aqui</Button>
         <Button mode="elevated">Clique Aqui</Button>
         <Button mode="outlined">Clique Aqui</Button>
         <Button mode="text">Clique Aqui</Button>
 
         
-        
         <Text>Olá</Text>
+
+        
         <Divider />
         <Text>Olá</Text>
         <Text>Olá</Text>
 
-        
         
         <Text variant="titleLarge">Olá</Text>
         <Text variant="headLineLarge">Olá</Text>
