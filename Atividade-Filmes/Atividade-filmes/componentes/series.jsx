@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
 export default function Series(props) {
-  const { nome, ano, diretor, numerotemporadas, imagem } = props;
+  const { nome, ano, diretor, temporadas, imagem } = props;
 
   return (
     <View style={styles.container}>
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#f0f0f0',
     padding: 10,
-    alignItems: 'center',
+    alignItems: '',
     justifyContent: 'center',
     flex: 1,
     margin: 10,

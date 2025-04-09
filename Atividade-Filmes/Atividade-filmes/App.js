@@ -79,6 +79,8 @@ export default function App() {
           );
         })}
 
+    <Text style={styles.header}>Lista de Séries</Text>
+
         {listaSeries.map((Serie) => (
           <Series
             nome={Serie.nome}
@@ -103,6 +105,6 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 600,
     textAlign: "center",
-    paddingTop: 30,
+    paddingTop: 50,
   },
 });
