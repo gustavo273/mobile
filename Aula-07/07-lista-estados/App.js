@@ -105,7 +105,7 @@ export default function App() {
         <FlatList 
         data={listaEstadosMunicipios}
         renderItem={({item}) => (
-          <Estado
+          <Estado 
           nome={item.nome}
           sigla={item.sigla}
           descrição={item.descrição}
@@ -128,5 +128,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "",
     justifyContent: "center",
+    paddingTop: 50,
   },
 });

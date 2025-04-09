@@ -16,6 +16,7 @@ export default function Estado(props) {
     <Card.Cover source = {{ uri: imagem }} />
     <Card.Actions>
         <FlatList
+        horizontal
         data={municipios}
         renderItem={({item}) => (
             <Municipio

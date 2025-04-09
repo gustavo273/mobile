@@ -1,12 +1,12 @@
-import { Text } from "react-paper";
+
 import { StyleSheet, View } from "react-native";
 import React from "react";
-import { Card, Paragraph, Title } from "react-native-paper";
+import { Card, Paragraph, Title, Text } from "react-native-paper";
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text variant="headLineLarge" style={{ textAlign: center }}>
+      <Text variant="headlineLarge" style={{ textAlign: 'center' }}>
         Tela de Início
       </Text>
 
@@ -15,7 +15,7 @@ export default function HomeScreen() {
           <Title>Um titulo</Title>
           <Paragraph>JBJHBJHKBJH</Paragraph>
         </Card.Content>
-        <Card.Cover source={{ uri: "" }} />
+        <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />
       </Card>
 
       <Card style={{ width: '90%' }}>
@@ -23,7 +23,7 @@ export default function HomeScreen() {
           <Title>Um titulo</Title>
           <Paragraph>JBJHBJHKBJH</Paragraph>
         </Card.Content>
-        <Card.Cover source={{ uri: "" }} />
+        <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />
       </Card>
 
       <Card style={{ width: '90%' }}>
@@ -31,7 +31,7 @@ export default function HomeScreen() {
           <Title>Um titulo</Title>
           <Paragraph>JBJHBJHKBJH</Paragraph>
         </Card.Content>
-        <Card.Cover source={{ uri: "" }} />
+        <Card.Cover source={{ uri:'https://picsum.photos/700' }} />
       </Card>
     </View>
   );

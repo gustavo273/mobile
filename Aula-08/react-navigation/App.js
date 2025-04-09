@@ -23,10 +23,10 @@ export default function App() {
             title: 'Inicio',
             headerTitleAlign: 'center',
             headerStyle: {
-              backgroundColor: 'orange'
+              backgroundColor: 'white'
             },
-        tabBarInactiveBackgroundColor: 'black',
-        tabBarActiveBackgroundColor: 'orange',
+        tabBarInactiveBackgroundColor: 'white',
+        tabBarActiveBackgroundColor: 'black',
         tabBarIcon: ({color, size}) => <Ionicons name='home' color={color} size={size} />
 
         }}
