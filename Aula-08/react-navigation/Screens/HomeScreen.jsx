@@ -1,10 +1,11 @@
 
-import { StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 import React from "react";
 import { Card, Paragraph, Title, Text } from "react-native-paper";
 
 export default function HomeScreen() {
   return (
+  <ScrollView>
     <View style={styles.container}>
       <Text variant="headlineLarge" style={{ textAlign: 'center' }}>
         Tela de Início
@@ -34,6 +35,7 @@ export default function HomeScreen() {
         <Card.Cover source={{ uri:'https://picsum.photos/700' }} />
       </Card>
     </View>
+  </ScrollView>
   );
 }
 
