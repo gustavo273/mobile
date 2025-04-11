@@ -56,13 +56,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '',
   },
   titulo: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 15,
-    textAlign: 'center'
+    textAlign: 'center',
+
   },
   item: {
     flexDirection: 'row',
@@ -73,8 +74,8 @@ const styles = StyleSheet.create({
     padding: 10
   },
   imagem: {
-    width: 60,
-    height: 60,
+    width: 100,
+    height: 100,
     borderRadius: 30,
     marginRight: 15
   },
