@@ -93,8 +93,8 @@ export default function ListaReceitasScreen({ navigation }) {
             <Card.Cover source={{ uri: item.imagem }} />
             <Card.Content>
               <Text style={styles.nome}>{item.nome}</Text>
-              <Text>⏱️ Tempo de Preparo: {item.tempoPreparo}</Text>
-              <Text>🍽️ Porções: {item.porcoes}</Text>
+              <Text> Tempo de Preparo: {item.tempoPreparo}</Text>
+              <Text>Porções: {item.porcoes}</Text>
             </Card.Content>
             <Card.Actions>
               <Button

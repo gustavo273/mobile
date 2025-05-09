@@ -14,8 +14,8 @@ export default function ReceitaScreen({ navigation, route }) {
         <Card.Cover source={{ uri: receita.imagem }} />
         <Card.Content>
           <Text style={styles.titulo}>Nome: {receita.nome}</Text>
-          <Text>⏱️ Tempo de preparo: {receita.tempoPreparo}</Text>
-          <Text>🍽️ Porções: {receita.porcoes}</Text>
+          <Text> Tempo de preparo: {receita.tempoPreparo}</Text>
+          <Text> Porções: {receita.porcoes}</Text>
 
           <Text style={styles.subtitulo}>Ingredientes:</Text>
           {receita.ingredientes.map((ingrediente, index) => (
