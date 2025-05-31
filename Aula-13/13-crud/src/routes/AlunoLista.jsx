@@ -1,34 +1,32 @@
-import { useEffect, useState } from 'react'
-import { FlatList, StyleSheet, View } from 'react-native'
-import { Button, Card, Text } from 'react-native-paper'
-import AlunoService from './AlunoService'
+import { useEffect, useState } from "react";
+import { FlatList, StyleSheet, View } from "react-native";
+import { Button, Card, Text } from "react-native-paper";
+import AlunoService from "./AlunoService";
 
 export default function AlunoLista({ navigation, route }) {
+  const [alunos, setAlunos] = useState([]);
 
-  const [alunos, setAlunos] = useState([])
-
-  useEffect(()=> {
-    buscarAlunos()
-  },[])
+  useEffect(() => {
+    buscarAlunos();
+  }, []);
 
   async function buscarAlunos() {
-    const listaAlunos = await AlunoService.listar()
-    setAlunos(listaAlunos)
+    const listaAlunos = await AlunoService.listar();
+    setAlunos(listaAlunos);
   }
   async function removerAluno(id) {
-    await AlunoService.remover(id)
-    alert('Aluno excluído com sucesso!!!')
-    buscarAlunos()
+    await AlunoService.remover(id);
+    alert("Aluno excluído com sucesso!!!");
+    buscarAlunos();
   }
-
 
   return (
     <View>
       <Button
         style={{ marginTop: 10 }}
-        icon='plus'
-        mode='contained'
-        onPress={() => navigation.navigate('AlunoForm')}
+        icon="plus"
+        mode="contained"
+        onPress={() => navigation.navigate("AlunoForm")}
       >
         Cadastrar
       </Button>
@@ -44,15 +42,16 @@ export default function AlunoLista({ navigation, route }) {
               <Text>Email: {item.email}</Text>
             </Card.Content>
             <Card.Actions>
-              <Button icon='pencil'></Button>
-              <Button icon='delete' onPress={() => removerAluno(item.id)}> </Button>
+              <Button icon="pencil" onPress={() => navigation.navigate('AlunoForm', item)}></Button>
+              <Button icon="delete" onPress={() => removerAluno(item.id)}>
+                {" "}
+              </Button>
             </Card.Actions>
           </Card>
         )}
       />
-
     </View>
-  )
+  );
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

@@ -4,13 +4,15 @@ import { Button, Text, TextInput } from 'react-native-paper'
 import { TextInputMask } from 'react-native-masked-text'
 import AlunoService from './AlunoService'
 
-export default function AlunoForm({navigation, route}) {
+export default function AlunoForm({ navigation, route }) {
 
-  const [nome, setNome] = useState("")
-  const [cpf, setCpf] = useState("")
-  const [email, setEmail] = useState("")
-  const [telefone, setTelefone] = useState("")
-  const [dataNascimento, setDataNascimento] = useState("")
+  const AlunoAntigo = route.params || {}
+
+  const [nome, setNome] = useState(AlunoAntigo.nome || "")
+  const [cpf, setCpf] = useState(AlunoAntigo.cpf || "")
+  const [email, setEmail] = useState(AlunoAntigo.email || "")
+  const [telefone, setTelefone] = useState(AlunoAntigo.telefone || "")
+  const [dataNascimento, setDataNascimento] = useState(AlunoAntigo.dataNascimento || "")
 
   async function salvar() {
     let aluno = {
@@ -25,6 +27,15 @@ export default function AlunoForm({navigation, route}) {
       alert('Preencha todos os campos!')
    return 
   }
+
+if (AlunoAntigo.id){
+  aluno.id = AlunoAntigo.id
+  await AlunoService.atualizar(aluno);
+  alert ('Aluno alterado');
+
+
+}else {
+  
   await AlunoService.salvar(aluno)
   alert('Aluno cadastrado com sucesso!!')
   navigation.reset({
@@ -33,10 +44,12 @@ export default function AlunoForm({navigation, route}) {
 
   })
   }
-
+  }
   return (
     <View style={styles.container}>
       <Text variant='titleLarge'>Informe os dados do Aluno:</Text>
+      
+      <Text variant='titleLarge'>ID do Aluno: {AlunoAntigo.id || 'NOVO'}</Text>
 
       <TextInput
         style={styles.input}
